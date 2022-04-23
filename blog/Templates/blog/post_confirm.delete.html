@@ -1,0 +1,19 @@
+{%extends "blog/base.html"%}
+
+    {%block content%}
+    <div class = "content-section">
+    <form method ="post">
+    
+    <fieldset class ="form-group">
+    <legend class ="border-bottom mb-4">delete post</legend>
+    <h2>do you really want to delete {{object.title}}</h2>
+    </fieldset>
+    <div class ="form-group">
+    <button type= "submit" class = "btn btn-outline-danger">delete </button>
+    <a class = "btn btn-outline-secondary" href="{% url 'post-detail'  object.id%}">cancel </button>
+    </div>
+    </form>
+    
+    </div>
+   
+    {%endblock%}
